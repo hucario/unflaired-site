@@ -1,16 +1,170 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root {
+  scroll-snap-type: y mandatory;
+	--font-stack: Inter, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	--font-stack-ui: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantrell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-stack-monospace: Recursive, "Cambria Code", Consolas, monaco, monospace;
+
+  --ls-display: -0.02em;
+  --display-2xl: normal 400 4.5rem/1.25 var(--font-stack);
+  --display-xl: normal 400 3.75rem/1.2 var(--font-stack);
+  --display-lg: normal 400 3rem/1.25 var(--font-stack);
+  --display-md: normal 400 2.25rem/1.22 var(--font-stack);
+  --display-sm: normal 400 1.875rem/1.27 var(--font-stack);
+  --display-xs: normal 400 1.5rem/1.33 var(--font-stack);
+
+  --text-xl: normal 400 1.25rem/1.5 var(--font-stack);
+  --text-lg: normal 400 1.125rem/1.56 var(--font-stack);
+  --text-md: normal 400 1rem/1.5 var(--font-stack);
+  --text-sm: normal 400 0.875rem/1.43 var(--font-stack);
+  --text-xs: normal 400 0.75rem/1.5 var(--font-stack);
+
+  --gray-25: #FCFCFD;
+  --gray-50: #F9FAFB;
+  --gray-100: #F2F4F7;
+  --gray-200: #EAECF0;
+  --gray-300: #D0D5DD;
+  --gray-400: #98A2B3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-700: #344054;
+  --gray-800: #1D2939;
+  --gray-900: #101828;
+
+  --primary-25: #FFFAFA;
+  --primary-50: #FFF5F5;
+  --primary-100: #FFEBEB;
+  --primary-200: #FED7D7;
+  --primary-300: #FBBBBB;
+  --primary-400: #F69292;
+  --primary-500: #ED7777;
+  --primary-600: #D95656;
+  --primary-700: #C64141;
+  --primary-800: #9E3838;
+  --primary-900: #7D3030;
+
+  --error-25: #FFFBFA;
+  --error-50: #FEF3F2;
+  --error-100: #FEE4E2;
+  --error-200: #FECDCA;
+  --error-300: #FDA29B;
+  --error-400: #F97066;
+  --error-500: #F04438;
+  --error-600: #D92D20;
+  --error-700: #B42318;
+  --error-800: #912018;
+  --error-900: #7A271A;
+
+
+
+  --focus-ring-normal: solid 2px var(--primary-100);
+  --focus-ring-gray: solid 2px var(--gray-100);
+  --focus-ring-gray-400: solid 2px var(--gray-100);
+  --focus-ring-error: solid 2px var(--error-100);
+
+  --shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-sm: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.16);
+  --shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.18), 0px 4px 6px -2px rgba(16, 24, 40, 0.13);
+  --shadow-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.28), 0px 8px 8px -4px rgba(16, 24, 40, 0.23);
+  --shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.38);
+  --shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.34);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-25: hsl(0, 100%, 1%);
+    --primary-50: hsl(0, 100%, 2%);
+    --primary-100: hsl(0, 100%, 4%);
+    --primary-200: hsl(0, 95%, 8%);
+    --primary-300: hsl(0, 89%, 14%);
+    --primary-400: hsl(0, 85%, 23%);
+    --primary-500: hsl(0, 77%, 30%);
+    --primary-600: hsl(0, 63%, 41%);
+    --primary-700: hsl(0, 54%, 48%);
+    --primary-800: hsl(0, 48%, 58%);
+    --primary-900: hsl(0, 45%, 66%);
+
+    --gray-900: #FCFCFD;
+    --gray-800: #F9FAFB;
+    --gray-700: #F2F4F7;
+    --gray-600: #EAECF0;
+    --gray-500: #D0D5DD;
+    --gray-400: #98A2B3;
+    --gray-300: #667085;
+    --gray-200: #475467;
+    --gray-100: #344054;
+    --gray-50: #1D2939;
+    --gray-25: #101828;
+    
+    --focus-ring-normal: solid 2px var(--primary-100);
+    --focus-ring-gray: solid 2px var(--gray-100);
+    --focus-ring-gray-400: solid 2px var(--gray-100);
+    --focus-ring-error: solid 2px var(--error-100);
+
+    --shadow-xs: 0px 1px 2px rgba(239, 231, 215, 0.05);
+    --shadow-sm: 0px 1px 3px rgba(239, 231, 215, 0.1), 0px 1px 2px rgba(239, 231, 215, 0.06);
+    --shadow-md: 0px 4px 8px -2px rgba(239, 231, 215, 0.1), 0px 2px 4px -2px rgba(239, 231, 215, 0.16);
+    --shadow-lg: 0px 12px 16px -4px rgba(239, 231, 215, 0.18), 0px 4px 6px -2px rgba(239, 231, 215, 0.13);
+    --shadow-xl: 0px 20px 24px -4px rgba(239, 231, 215, 0.28), 0px 8px 8px -4px rgba(239, 231, 215, 0.23);
+    --shadow-2xl: 0px 24px 48px -12px rgba(239, 231, 215, 0.38);
+    --shadow-3xl: 0px 32px 64px -12px rgba(239, 231, 215, 0.34);
+  }
 }
 
-* {
+#__next {
+  font-family: var(--font-stack);
+  background: var(--gray-25);
+  color: var(--gray-900);
+  width: 100%;
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
   box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body, #__next {
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+	all: unset;
+	appearance: none;
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url("/AlfaSlabOne-Regular.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
 }

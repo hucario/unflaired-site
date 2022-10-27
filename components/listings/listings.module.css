@@ -1,0 +1,72 @@
+.main {
+	scroll-snap-align: start;
+	width: 100%;
+	background-color: #694b35;
+	color: #ebdbc2;
+	padding: 3rem 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.main h1 {
+	text-align: center;
+	font-family: "Alfa Slab One";
+	border-bottom: solid 3px currentColor;
+	font-weight: 900;
+	letter-spacing: 0.04em;
+	line-height: 1.5;
+	font-size: 5rem;
+}
+.main ol {
+	display: grid;
+	padding: 0.5rem;
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fill, 23rem);
+	flex-grow: 1;
+	justify-content: space-around;
+	align-items: center;
+	align-content: start;
+}
+.main li {
+	display: block;
+}
+.main li a {
+	display: grid;
+	gap: 0 0.5rem;
+	grid-template-columns: 5rem auto;
+	grid-template-rows: max-content 1fr;
+
+	color: #ebdbc2;
+	font-size: 1.2rem;
+	text-decoration: none;
+	width: min(100%, 23rem);
+	border-radius: 5px;
+	transition: background-color 50ms;
+}
+.main li a:hover {
+	background-color: #866853;
+}
+.main li a img {
+	height: 5rem;
+	width: 5rem;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 5px;
+	grid-row: 1/-1;
+	grid-column: 1;
+}
+.main li a span {
+	grid-row: 1;
+	grid-column: 2;
+	font-family: "Alfa Slab One";
+	font-weight: 900;
+}
+.main li a code {
+	grid-row: 2;
+	grid-column: 2;
+	font-family: "Playfair Display";
+	font-weight: 700;
+	line-height: 0.6;
+}

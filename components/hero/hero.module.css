@@ -1,0 +1,138 @@
+.wanted {
+	scroll-snap-align: start;
+	background-color: #ebdbc2;
+	color: #422008;
+	width: 100%;
+	min-height: 100vh;
+	height: 100vh;
+
+	font-family: "Playfair Display";
+
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	gap: 0 2rem;
+	justify-content: center;
+}
+
+@media (max-width: 1200px) {
+	.wanted {
+		flex-wrap: wrap;
+		height: unset;
+	}
+	.wanted .right {
+		padding: 0;
+	}
+	.wanted .right img {
+		height: unset;
+		width: 90vw;
+		max-width: 500px;
+	}
+	.wanted .left h1 {
+		text-align: center;
+		width: 100%;
+		font-size: 3rem;
+	}
+	.wanted .left h2 {
+		text-align: center;
+		justify-content: center;
+		width: 100%;
+		white-space: normal;
+		font-size: 2rem;
+		text-align: center;
+		margin: 1rem 0;
+	}
+	.wanted .left .wantedFor {
+		font-size: 1.1rem;
+		height: 2.8em;
+	}
+	.wanted .left .end {
+		font-size: 1.3rem;
+	}
+}
+
+.left {
+	flex-grow: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.left .align {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0 1rem;
+	align-items: center;
+}
+.left h1 {
+	font-family: "Alfa Slab One";
+	font-weight: 900;
+	letter-spacing: 0.04em;
+	line-height: 1;
+	font-size: 6rem;
+	margin-bottom: -0.1em;
+	padding-left: 1rem;
+}
+.left hr {
+	width: 100%;
+	height: 5px;
+
+	border: none;
+	background-color: #422008;
+	margin: 1rem 0;
+}
+.left h2 {
+	background-color: #422008;
+	color: #ebdbc2;
+	font-family: "Alfa Slab One";
+
+	font-weight: 900;
+	letter-spacing: 0.04em;
+	font-size: 4rem;
+	padding: 0.2rem 2rem;
+	border-radius: 0.5rem;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+}
+.left .wantedFor {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	height: 4.5em;
+	font-weight: 600;
+	overflow: hidden;
+}
+.left .wantedFor span {
+	white-space: pre;
+}
+.left .end {
+	font-size: 1.9rem;
+}
+.left .end strong {
+	font-weight: 900;
+}
+.right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	padding: 1.4rem 0;
+	padding-top: 2.5rem;
+}
+.right img {
+	height: 80vh;
+	aspect-ratio: 1/1;
+	filter: sepia(0.4);
+	border-radius: 5px;
+}
+.right a {
+	color: inherit;
+	text-decoration: inherit;
+}
+.right h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	font-family: "Alfa Slab One";
+}
