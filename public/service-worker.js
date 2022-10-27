@@ -44,6 +44,7 @@ self.addEventListener("push", function (event) {
 		h1: string,
 		body: string
 	}} */
+	console.log(event.data.text());
 	let evtDetails = JSON.parse(event.data.text());
 	self.registration.showNotification(evtDetails.h1, {
 		body: evtDetails.body,
