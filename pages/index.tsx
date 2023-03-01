@@ -1,8 +1,6 @@
-import type { UnflairedUser } from "$lib/types";
 import Hero from "$components/hero";
 import Head from "next/head";
 import Listings from "$components/listings";
-import Footer from "$components/footer";
 import { useEffect, useState } from "react";
 import getTop50 from "$lib/apimock";
 
@@ -26,7 +24,6 @@ export default function Home({ Top50 }) {
 			</Head>
 			<Hero worstOffender={Top50[0]} />
 			<Listings top={Top50} />
-			<Footer />
 		</>
 	);
 }
